@@ -1,26 +1,35 @@
-const express = require('express');
+{
 
-const app = express();
+  "name": "node-app",
 
+  "description": "hello jenkins test app",
 
-// Respond with "Hello World" when a GET request is made to the root "/"
+  "version": "0.0.1",
 
-app.get('/', (req, res) => {
+  "private": true,
 
-  res.send('Hello from Nodejs App');
+  "main": "index.js",
 
-});
+  "scripts": {
 
+    "start": "node app.js",
 
-// Start server on port 3000 or custom port via environment variable
+    "test": "mocha"
 
-const PORT = process.env.PORT || 3000;
+  },
 
-app.listen(PORT, () => {
+  "dependencies": {
 
-  console.log(`Server is running on http://localhost:${PORT}`);
+    "express": "3.12.0"
 
-});
+  },
 
+  "devDependencies": {
 
-module.exports = app;
+    "mocha": "10.2.0",
+
+    "supertest": "6.3.3"
+
+  }
+
+}
